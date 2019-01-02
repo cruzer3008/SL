@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+	<header>
+		<title>Simple calculator</title>
+	</header>
+
+	<body>
+		<input type="number" id="ip" placeholder="Enter the number here"/>
+
+		<input type="button" id="button1" onClick = "mul2()" value="Multiply By 2"/>
+		<input type="button" id="button2" onClick = "mulSelf()" value = "Multiply by self"/>
+		<br/>
+		Result: <span id="result"></span>
+	</body>
+
+	<script>
+
+		function mul2(){
+			var num = document.getElementById("ip").value;
+			if(num=="")
+			{
+				document.getElementById("result").innerHTML = "Enter an input";
+			}
+			else
+			{	
+			var answer = num*2;
+			document.getElementById("result").innerHTML = answer;
+			}
+		}
+
+		function mulSelf(){
+			var num = document.getElementById("ip").value;
+			if(num=="")
+			{
+				document.getElementById("result").innerHTML = "Enter an input";
+			}
+			else
+			{
+			var answer = num*num;
+			document.getElementById("result").innerHTML = answer; 
+			}
+		}
+	</script>
+</html>

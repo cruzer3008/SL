@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+	<header>
+		<title>Calculator</title>
+	</header>
+
+	<body>
+		Enter the first number: <input type="number" id="x" placeholder="First Number"/><br/><br/>
+		Enter the second number: <input type="number" id="y" placeholder="Second Number"/><br/><br/>	
+
+		<input name = "calc" type="radio" id="add"/>Add
+		<input name = "calc" type="radio" id="subtract"/>Subtract
+		<input name = "calc" type="radio" id="multiply"/>Multiply
+		<input name = "calc" type="radio" id="divide"/>Divide <br/><br/>
+		<input type="button" value="Calculate" name="Calculate" onClick = "result()"/>		
+
+		Result: <span id="result"></span>
+	</body>
+
+		<script>
+
+			function result()
+			{
+
+			var x = document.getElementById("x").value;
+			var y = document.getElementById("y").value;
+
+			if(x==""||y=="")
+			{
+				document.getElementById("result") = "Enter all the values";
+			}
+			
+			else
+			{
+				if(document.getElementById("add").checked)
+				{
+					a = parseInt(x);
+					b = parseInt(y);
+					document.getElementById("result").innerHTML = a+b;
+				}
+			
+				else if(document.getElementById("subtract").checked)
+				{
+					a = parseInt(x);
+					b = parseInt(y);
+					document.getElementById("result").innerHTML = a-b;
+				}
+
+				else if(document.getElementById("multiply").checked)
+				{
+					a = parseInt(x);
+					b = parseInt(y);
+					document.getElementById("result").innerHTML = a*b;
+				}
+
+				else if(document.getElementById("divide").checked)
+				{
+					a = parseInt(x);
+					b = parseInt(y);
+
+					if(b==0)
+						document.getElementById("result").innerHTML = "Second Number cannot be 0";
+					else
+					{
+						document.getElementById("result").innerHTML = a/b;
+					}
+					
+					
+				}
+			}
+		}
+		</script>
+
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<header>
+		<title>
+			Hospital
+		</title>
+	</header>
+
+	<body>
+		<p id="hospitalName"></p>
+		<p id="hospitalLocation"></p>
+
+		<p id="patientDetails" onmouseover="showPatient()">Patient Details</p>
+		<div id="patient" hidden>
+			<p id="patientName"></p>
+			<p id="patientAdhaar"></p>
+			<p id="patientLab"></p>
+		</div>
+	</body>
+
+	<script>
+		var patient = {"name":"Yash Khakhar","adhaar":120,"lab":["Diabetes","Thyroid"]};
+		var hospital = {"name":"Ramaiah Hospital","location":"Bangalore"}
+
+		document.getElementById("hospitalName").innerHTML = hospital.name;
+		document.getElementById("hospitalLocation").innerHTML = hospital.location;
+
+		document.getElementById("patientName").innerHTML = patient.name;
+		document.getElementById("patientAdhaar").innerHTML = patient.adhaar;
+		document.getElementById("patientLab").innerHTML = patient.lab;
+
+		function showPatient(){
+			document.getElementById("patient").removeAttribute("hidden");
+			document.getElementById("patientDetails").style.color = "red";
+		}
+			
+
+	
+	</script>
+</html>

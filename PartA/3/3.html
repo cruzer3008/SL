@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+	<header><title>Longest word</title></header>
+	<body>
+		<input type="text" placeholder="Enter text here" id="inputArea"/>
+		<input type = "button" onclick = "find()" value="find"/>
+		<br/><br/>
+		Length of the longest word = <span id="result"></span>
+		longest word = <span id="resultW"></span>
+	</body>
+
+	<script>
+		function find(){
+			var text = document.getElementById("inputArea").value
+			var string = text.split(" ")
+			var longest = 0
+			var word = null
+			for(var i=0;i<string.length;i++)
+			{
+				if(longest<string[i].length)
+					longest = string[i].length
+					word = string[i]
+			}
+
+			document.getElementById("result").innerHTML = longest
+			document.getElementById("resultW").innerHTML = word
+		}
+	</script>
+</html>

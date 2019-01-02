@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+	<body>
+		<table>
+  			<tr id="menu">
+  			<th  onmouseover="fnLambo()">Lamborghini</th>
+ 			<th  onmouseover="fnFord()">Ford</th>
+ 			<th  onmouseover="fnFerrari()">Ferrari</th>
+ 			<th  onmouseover="fnPorsche()">Porsche</th> 			
+ 			</tr>
+ 		</table>
+	
+		<table class="table" id="table" hidden>
+  			<tr id="item1"></tr>
+  			<tr id="item2"</tr>
+  			<tr id="item3"</tr>
+		</table>	
+		
+
+		
+		<script>
+			
+			
+			
+			var lsvj = [{"name":"Model = Aventador SVJ","brand":"Brand = Lamborghini"}];
+			var fgt = [{"name":"Model = GT","brand":"Brand = Ford"}];	
+			var laf = [{"name":"Model = LaFerrari", "brand":"Brand = Ferrari"}];	
+			var p918 = [{"name":"Model = 918", "brand":"Brand = Porsche"}];	   
+				   	
+			function fnLambo()
+			{
+				var z1=" ", x1=" ", y1=" ";
+				document.getElementById("table").removeAttribute('hidden');
+				x1+=lsvj[0].brand;
+				document.getElementById("item2").innerHTML=x1;
+				y1+=lsvj[0].name;				
+				document.getElementById("item3").innerHTML=y1;
+			}
+			function fnFord()
+			{
+				var z1=" ", x1=" ", y1=" ";
+				document.getElementById("table").removeAttribute('hidden');
+				x1+=fgt[0].brand;
+				document.getElementById("item2").innerHTML=x1;
+				y1+=fgt[0].name;				
+				document.getElementById("item3").innerHTML=y1;
+			}
+			function fnFerrari()
+			{
+				var z1=" ", x1=" ", y1=" ";
+				document.getElementById("table").removeAttribute('hidden');
+				x1+=laf[0].brand;
+				document.getElementById("item2").innerHTML=x1;
+				y1+=laf[0].name;				
+				document.getElementById("item3").innerHTML=y1;
+			}
+			function fnPorsche()
+			{
+				var z1=" ", x1=" ", y1=" ";
+				document.getElementById("table").removeAttribute('hidden');
+				x1+=p918[0].brand;
+				document.getElementById("item2").innerHTML=x1;
+				y1+=p918[0].name;				
+				document.getElementById("item3").innerHTML=y1;
+			}				
+		</script>
+	</body>
+</html>
